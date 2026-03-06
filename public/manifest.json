@@ -1,0 +1,17 @@
+{
+    "name": "5h Limit Notifier",
+    "short_name": "5h Notice",
+    "description": "5時間ごとのリミット更新タイミングを通知します",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#7c4dff",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

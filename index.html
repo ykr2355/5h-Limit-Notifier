@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5h Limit Notifier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="apple-touch-icon" href="./icon.png">
+    <meta name="theme-color" content="#7c4dff">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>5h Limit Notifier</h1>
+            <div id="notification-status" class="status-badge">
+                <span class="pulse"></span>
+                <span id="status-text">通知を有効にする</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="timer-card">
+                <div class="timer-label">次の通知まで</div>
+                <div id="countdown" class="timer-display">--:--:--</div>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">
+                        <span>前回の通知</span>
+                    </span>
+                    <span id="prev-time" class="value">----/--/-- --:--</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">
+                        <span>次回の通知</span>
+                        <button id="edit-base-time-btn" class="edit-btn" aria-label="基準時間を変更">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+                            </svg>
+                        </button>
+                    </span>
+                    <span id="next-time" class="value">----/--/-- --:--</span>
+                    <input type="datetime-local" id="base-time-input" class="base-time-input hidden">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>5時間ごとに通知を送信します</p>
+        </footer>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
